@@ -134,7 +134,7 @@
         max="0.3"
         optimum="0"
       />
-      <div class="tip">{tipText}</div>
+      <div class="fontSize tip">{tipText}</div>
     {/if}
   </div>
   <video
