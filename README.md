@@ -1,48 +1,70 @@
-# Svelte + Vite
+<div id="top"></div>
 
-This template should help get you started developing with Svelte in Vite.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://fobshippingpoint.github.io/why-are-you-so-loud/">
+    <img src="images/icon.png" alt="Logo" width="80">
+  </a>
 
-## Recommended IDE Setup
+  <h3 align="center"><a href="https://fobshippingpoint.github.io/why-are-you-so-loud/">why are you so loud?</a></h3>
 
-[VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+  </p>
+</div>
 
-## Need an official Svelte framework?
+<!-- ABOUT THE PROJECT -->
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## About The Project
 
-## Technical considerations
+![Product Name Screen Shot][product-screenshot]
 
-**Why use this over SvelteKit?**
+平偉 is a well-known meme at 2012. This little app can help you find the good old days.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+### How to Use
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- Press the mic button.
+- Accept the microphone permission.
+- Start measuring your volume.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+### Built With
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+- [Svelte](https://svelte.dev/)
+- [Vite](https://vitejs.dev/)
+- [Rythm.js](https://github.com/Okazari/Rythm.js)
+- [Pure.css](https://purecss.io/)
 
-**Why include `.vscode/extensions.json`?**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+<!-- GETTING STARTED -->
 
-**Why enable `checkJs` in the JS template?**
+## Installation
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+- Install NPM packages
+  ```sh
+  pnpm install
+  ```
+- Development
+  ```sh
+  pnpm dev
+  ```
+- Build
+  ```sh
+  pnpm build
+  ```
 
-**Why is HMR not preserving my local component state?**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+<!-- LICENSE -->
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+## License
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+Distributed under the MIT License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[product-screenshot]: images/screenshot.png
