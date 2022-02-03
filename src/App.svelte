@@ -11,16 +11,18 @@
 
   const LOW = 0.1;
   const HIGH = 0.2;
-  const MAX = 0.5;
+  const MAX = 0.3;
 
   const rythm = new Rythm();
 
   rythm.addRythm("fontSize", "fontSize", 0, 100, {
-    min: 0.2,
-    max: 2,
+    min: 1,
+    max: 3,
   });
 
   function play() {
+    if (!videoEl) return;
+
     const promise = videoEl.play();
     if (promise !== undefined) {
       promise
@@ -96,7 +98,7 @@
   }
 </script>
 
-<main class="center-me">
+<main class="center-parent">
   <div bind:this={controlEl}>
     {#if !gotPermission}
       {#if canPlay}
@@ -125,16 +127,19 @@
             /><line x1="8" y1="23" x2="16" y2="23" /></svg
           >
         </button>
+        <h1 align="center">開始測量</h1>
       {/if}
     {:else}
-      <meter
-        bind:this={volumeMeterEl}
-        low="0.1"
-        high="0.2"
-        max="0.3"
-        optimum="0"
-      />
-      <div class="fontSize tip">{tipText}</div>
+      <div class="tip-container">
+        <meter
+          bind:this={volumeMeterEl}
+          low="0.1"
+          high="0.2"
+          max="0.3"
+          optimum="0"
+        />
+        <div class="fontSize tip">{tipText}</div>
+      </div>
     {/if}
   </div>
   <video
@@ -154,6 +159,13 @@
   </video>
 </main>
 
+<footer>
+  Built with ❤️ and 科皓不要 | v1.0 |
+  <a href="https://github.com/FOBshippingpoint/why-are-you-so-loud">GitHub</a>
+  |
+  <a href="https://www.youtube.com/channel/UC-UzF0F_qnMhwy9oB-DyWsg">YouTube</a>
+</footer>
+
 <style>
   video {
     /* override other styles to make responsive */
@@ -161,33 +173,39 @@
     height: auto !important;
   }
 
-  main {
-    font-family: "Noto Sans TC", sans-serif;
-  }
-
-  .center-me {
-    margin: auto;
-    min-width: 200px;
-    text-align: center;
-  }
-
   .custom-button {
     border-radius: 50%;
-    background: #42dc42;
     padding-top: 1em;
     padding-bottom: 1em;
   }
 
+  .tip-container {
+    position: relative;
+    min-width: 500px;
+    text-align: center;
+  }
+
   .tip {
     position: absolute;
-    left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    left: 0;
   }
 
   :global(html, body, #app) {
     height: 100%;
-    display: grid;
+    font-family: "Noto Sans TC", sans-serif;
+  }
+
+  .center-parent {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    background-color: #c7c7c7d2;
+    text-align: center;
+    padding: 1em;
   }
 </style>

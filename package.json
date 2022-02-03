@@ -1,12 +1,19 @@
 {
   "name": "why-are-you-so-loud",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A Single Page App for measuring volume.",
   "type": "module",
+  "private": "true",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": {
+    "name": "FOBshippingpoint"
+  },
+  "bugs": "https://github.com/FOBshippingpoint/why-are-you-so-loud/issues",
+  "homepage": "https://fobshippingpoint.github.io/why-are-you-so-loud/",
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "gh-pages": "^3.2.3",
@@ -15,5 +22,7 @@
   },
   "dependencies": {
     "rythm.js": "^2.2.5"
-  }
+  },
+  "license": "MIT",
+  "repository": "github:FOBshippingpoint/why-are-you-so-loud"
 }
